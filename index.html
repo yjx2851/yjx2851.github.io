@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>余佳兴 Jiaxing Yu</title>
+  <title>Jiaxing Yu's cv</title>
   <meta name="description" content="Jiaxing Yu is a Ph.D. student at Nanjing University working on 3D Gaussian Splatting, structured reconstruction, CAD modeling, and 3D vision.">
   <style>
     :root {
@@ -183,8 +183,9 @@
 
     .paper {
       display: grid;
-      grid-template-columns: 150px minmax(0, 1fr);
-      gap: 22px;
+      grid-template-columns: minmax(280px, 36%) minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
       padding: 4px 0 24px;
       margin-bottom: 22px;
       border-bottom: 1px solid var(--border);
@@ -195,16 +196,17 @@
     }
 
     .thumb {
-      display: grid;
-      place-items: center;
-      min-height: 104px;
+      align-self: start;
       border: 1px solid var(--border);
       border-radius: 4px;
-      background: linear-gradient(135deg, #eef3f8, #ffffff);
-      color: #506070;
-      font-size: 18px;
-      font-weight: 700;
-      text-align: center;
+      background: var(--soft);
+      overflow: hidden;
+    }
+
+    .thumb img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     h3 {
@@ -331,15 +333,36 @@
       transform: translateY(-2px);
     }
 
-    .icon-button svg {
-      width: 22px;
-      height: 22px;
-      display: block;
+    .icon-glyph {
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #30363d;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .icon-button.email .icon-glyph {
+      background: #1769aa;
+    }
+
+    .icon-button.scholar .icon-glyph {
+      background: #4285f4;
     }
 
     .icon-button.model-hub {
-      color: #5f4300;
       background: #fff8db;
+    }
+
+    .icon-button.model-hub .icon-glyph {
+      background: #ffd65a;
+      color: #5f4300;
+      border: 1px solid #e5b83d;
     }
 
     .sr-only {
@@ -390,34 +413,20 @@
 </head>
 <body>
   <div class="icon-dock" aria-label="Quick links">
-    <a class="icon-button" href="mailto:yjx2851@gmail.com" title="Email" aria-label="Email Jiaxing Yu">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4.5 6.75h15v10.5h-15z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-        <path d="M5 7.25l7 5.5 7-5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+    <a class="icon-button email" href="mailto:yjx2851@gmail.com" title="Email" aria-label="Email Jiaxing Yu">
+      <span class="icon-glyph" aria-hidden="true">@</span>
       <span class="sr-only">Email</span>
     </a>
-    <a class="icon-button" href="https://github.com/yjx2851" title="GitHub" aria-label="GitHub profile">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 2.75a9.25 9.25 0 0 0-2.93 18.02c.46.08.63-.2.63-.44v-1.58c-2.56.56-3.1-1.08-3.1-1.08-.42-1.07-1.02-1.36-1.02-1.36-.84-.57.06-.56.06-.56.93.07 1.42.96 1.42.96.83 1.42 2.18 1.01 2.71.77.08-.6.32-1.01.59-1.24-2.04-.23-4.19-1.02-4.19-4.55 0-1 .36-1.83.95-2.47-.1-.24-.41-1.18.09-2.44 0 0 .78-.25 2.54.94A8.8 8.8 0 0 1 12 7.43c.79 0 1.57.1 2.31.31 1.76-1.19 2.54-.94 2.54-.94.5 1.26.19 2.2.09 2.44.59.64.95 1.47.95 2.47 0 3.54-2.15 4.31-4.2 4.54.33.29.63.85.63 1.72v2.36c0 .24.16.52.64.43A9.25 9.25 0 0 0 12 2.75z" fill="currentColor"/>
-      </svg>
+    <a class="icon-button github" href="https://github.com/yjx2851" title="GitHub" aria-label="GitHub profile">
+      <span class="icon-glyph" aria-hidden="true">Git</span>
       <span class="sr-only">GitHub</span>
     </a>
-    <a class="icon-button" href="https://scholar.google.com/scholar?q=Jiaxing+Yu+3D+Gaussian+Splatting" title="Google Scholar" aria-label="Google Scholar search">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 3.2 3.6 8l8.4 4.8L20.4 8 12 3.2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-        <path d="M7.2 10.4v4.2c0 1.6 2.1 3 4.8 3s4.8-1.4 4.8-3v-4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-        <path d="M20.4 8v6.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-      </svg>
+    <a class="icon-button scholar" href="https://scholar.google.com/scholar?q=Jiaxing+Yu+3D+Gaussian+Splatting" title="Google Scholar" aria-label="Google Scholar search">
+      <span class="icon-glyph" aria-hidden="true">G</span>
       <span class="sr-only">Google Scholar</span>
     </a>
     <a class="icon-button model-hub" href="https://huggingface.co/" title="Model Hub" aria-label="Model hub">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" fill="#ffd65a" stroke="currentColor" stroke-width="1.3"/>
-        <path d="M7.6 9.4c.55-.7 1.55-.7 2.1 0M14.3 9.4c.55-.7 1.55-.7 2.1 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M8.2 14.2c1.55 1.45 6.05 1.45 7.6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-        <path d="M6.8 12.2c-1.7.4-2.6 1.25-2.3 2.18.28.86 1.38.96 2.48.16M17.2 12.2c1.7.4 2.6 1.25 2.3 2.18-.28.86-1.38.96-2.48.16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
-      </svg>
+      <span class="icon-glyph" aria-hidden="true">HF</span>
       <span class="sr-only">Model Hub</span>
     </a>
   </div>
@@ -425,6 +434,7 @@
     <nav class="container nav" aria-label="Primary navigation">
       <a class="brand" href="#top">Jiaxing Yu</a>
       <div class="nav-links">
+        <a href="#interests">Interests</a>
         <a href="#news">News</a>
         <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
@@ -436,15 +446,12 @@
   <main id="top" class="container">
     <section class="profile" aria-label="Profile">
       <div>
-        <h1>Jiaxing Yu</h1>
-        <p class="role">Ph.D. Student(2024 - Now) at Nanjing University</p>
+        <h1>余佳兴 Jiaxing Yu</h1>
+        <p class="role">Ph.D. Student(2024 - Present), <b>Nanjing University</b>, <b><a href="https://www.njumeta.com/">Meta Graphics & 3D Vision Lab</b></a></p>
+        <p class="role">B.Eng. Student(2020 - 2024), <b>Xiamen University</b></p>
         <p>
           I am currently a Ph.D. student at School of Computer Science, Nanjing University, supervised by
-          Prof. Yanwen Guo<a href="https://scholar.google.com/citations?user=hVlfEkwAAAAJ&hl=zh-CN">(Homepage)</a>, Prof. Jie Guo<a href="https://www.njumeta.com/">(Homepage)</a>, and assistant researcher Yuanqi Li<a href="https://yuanqili.github.io/">(Homepage)</a>.
-        </p>
-        <p>
-          My research interests include computer graphics, 3D vision, 3D Gaussian Splatting, structured reconstruction,
-          CAD modeling, multimodal foundation models, and 3D generative AI.
+          <b>Prof. Yanwen Guo</b>, <b>Prof. Jie Guo</b>, and assistant researcher <b>Yuanqi Li</b>.
         </p>
         <p>
           Prior to that, I received my bachelor's degree in Computer Science and Technology from Xiamen University in 2024.
@@ -452,7 +459,7 @@
         <ul class="contact" aria-label="Contact information">
           <li><strong>Email:</strong> <a href="mailto:yjx2851@gmail.com">yjx2851@gmail.com</a></li>
           <li><strong>WeChat:</strong> yjx2851</li>
-          <li><strong>Phone:</strong> 13813082851</li>
+          <li><strong>Github:</strong> <a href="https://github.com/yjx2851">https://github.com/yjx2851</a></li>
         </ul>
       </div>
       <aside class="portrait" aria-label="Portrait">
@@ -460,11 +467,24 @@
       </aside>
     </section>
 
+    <section id="Intersets" aria-labelledby="Intersets-title">
+        <h2 id="news-title">Interests</h2>
+        <p>
+            My research interests include <b>structured reconstruction</b>, <b>3D Gaussian Splatting</b>, <b>3D Generation</b>, and <b>World Model</b>.
+        </p>
+        <p>
+            From 2024 to 2025, I participated in reconstruction projects for industrial scenarios and conducted research on <b>CAD reconstruction</b>.
+        </p>
+        <p>
+            In 2026, I shifted my research focus toward 3D generation, with particular interests in <b>re-topology</b> and <b>scene generation</b>. My next research work will be developed around these directions.
+        </p>
+    </section>
+
     <section id="news" aria-labelledby="news-title">
       <h2 id="news-title">News</h2>
       <ul class="news-list">
-        <li><span class="date">2026.05</span><span>Completed an AI algorithm internship at ByteDance GAME 3D AIGC.</span></li>
-        <li><span class="date">2026</span><span>BrepGaussian was accepted by CVPR 2026.</span></li>
+        <li><span class="date">2026.02-2026.05</span><span>Completed a research internship at <b>ByteDance</b> GAME 3D AIGC.</span></li>
+        <li><span class="date">2026</span><span> 🎉 BrepGaussian was accepted by <b>CVPR 2026</b>.</span></li>
         <li><span class="date">2024.09</span><span>Started Ph.D. study at Nanjing University.</span></li>
         <li><span class="date">2024.06</span><span>Received B.Eng. degree from Xiamen University.</span></li>
       </ul>
@@ -473,20 +493,15 @@
     <section id="publications" aria-labelledby="publications-title">
       <h2 id="publications-title">Publications</h2>
       <article class="paper">
-        <div class="thumb">BrepGaussian</div>
+        <div class="thumb"><img src="BrepGaussian.png" alt="BrepGaussian reconstruction preview"></div>
         <div>
-          <h3>BrepGaussian: Structured Reconstruction Based on 3D Gaussian Splatting</h3>
-          <p class="authors"><strong>Jiaxing Yu</strong></p>
-          <p class="venue">Proceedings of CVPR 2026</p>
+          <h3>BrepGaussian: CAD reconstruction from Multi-View Images with Gaussian Splatting</h3>
+          <p class="authors"><b>Jiaxing Yu</b>, Dongyang Ren, Hangyu Xu, Zhouyuxiao Yang, Zhengkang Zhou, Yuanqi Li†, Jie Guo, Yanwen Guo</p>
+          <p class="venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2026</p>
           <div class="links">
-            <span>Paper Coming Soon</span>
-            <span>Code Coming Soon</span>
+            <a href="https://arxiv.org/abs/2602.21105">Paper</a>
+            <a href="https://github.com/yjx2851/BrepGaussian">Code</a>
           </div>
-          <p class="summary">
-            We build a structured reconstruction pipeline that reconstructs CAD components from multi-view images based on
-            3D Gaussian Splatting, involving multi-view reconstruction theory, renderer-level CUDA modification, CAD
-            reconstruction, and wireframe reconstruction.
-          </p>
         </div>
       </article>
     </section>
@@ -497,7 +512,7 @@
         <div class="entry-time">2026.02 - 2026.05</div>
         <div>
           <p class="entry-title">ByteDance GAME 3D AIGC</p>
-          <p class="entry-meta">AI Algorithm Intern</p>
+          <p class="entry-meta">Research Intern</p>
           <ul>
             <li>Defined mesh topology quality standards and used Qwen-3.5 for automated data cleaning on million-scale datasets, achieving about 95% high-quality data recall.</li>
             <li>Contributed to a remesh generation module by combining autoregressive modeling and reinforcement learning strategies, improving topological connectivity for irregular geometries.</li>
@@ -509,11 +524,10 @@
     <section id="education" aria-labelledby="education-title">
       <h2 id="education-title">Education</h2>
       <article class="entry">
-        <div class="entry-time">2024.09 - 2029.06</div>
+        <div class="entry-time">2024.09 - Present</div>
         <div>
           <p class="entry-title">Nanjing University</p>
           <p class="entry-meta">Ph.D. Student, Computer Science and Technology</p>
-          <p>Research areas include deep learning, computer graphics, machine learning, 3D vision, 3D reconstruction and generation, CAD modeling, and multimodal foundation models.</p>
         </div>
       </article>
       <article class="entry">
@@ -521,7 +535,6 @@
         <div>
           <p class="entry-title">Xiamen University</p>
           <p class="entry-meta">B.Eng., Computer Science and Technology</p>
-          <p>Selected coursework: Data Structures 93, Computer Networks 87, Pattern Recognition 90, Algorithm Design and Analysis 91, Digital Signal Processing 92.</p>
         </div>
       </article>
     </section>
