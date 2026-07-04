@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jiaxing Yu</title>
+  <title>余佳兴 Jiaxing Yu</title>
   <meta name="description" content="Jiaxing Yu is a Ph.D. student at Nanjing University working on 3D Gaussian Splatting, structured reconstruction, CAD modeling, and 3D vision.">
   <style>
     :root {
@@ -298,6 +298,61 @@
       text-align: center;
     }
 
+
+    .icon-dock {
+      position: fixed;
+      right: 22px;
+      top: 50%;
+      z-index: 20;
+      display: grid;
+      gap: 10px;
+      transform: translateY(-50%);
+    }
+
+    .icon-button {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid #d7dce2;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.94);
+      color: #30363d;
+      box-shadow: 0 8px 24px rgba(60, 64, 67, 0.12);
+      transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+    }
+
+    .icon-button:hover,
+    .icon-button:focus-visible {
+      border-color: #b8c2cc;
+      box-shadow: 0 10px 28px rgba(60, 64, 67, 0.18);
+      outline: none;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    .icon-button svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    .icon-button.model-hub {
+      color: #5f4300;
+      background: #fff8db;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
     @media (max-width: 760px) {
       .nav {
         align-items: flex-start;
@@ -322,10 +377,50 @@
       .paper {
         gap: 8px;
       }
+
+      .icon-dock {
+        top: auto;
+        right: 50%;
+        bottom: 14px;
+        grid-auto-flow: column;
+        transform: translateX(50%);
+      }
     }
   </style>
 </head>
 <body>
+  <div class="icon-dock" aria-label="Quick links">
+    <a class="icon-button" href="mailto:yjx2851@gmail.com" title="Email" aria-label="Email Jiaxing Yu">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4.5 6.75h15v10.5h-15z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M5 7.25l7 5.5 7-5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="sr-only">Email</span>
+    </a>
+    <a class="icon-button" href="https://github.com/yjx2851" title="GitHub" aria-label="GitHub profile">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.75a9.25 9.25 0 0 0-2.93 18.02c.46.08.63-.2.63-.44v-1.58c-2.56.56-3.1-1.08-3.1-1.08-.42-1.07-1.02-1.36-1.02-1.36-.84-.57.06-.56.06-.56.93.07 1.42.96 1.42.96.83 1.42 2.18 1.01 2.71.77.08-.6.32-1.01.59-1.24-2.04-.23-4.19-1.02-4.19-4.55 0-1 .36-1.83.95-2.47-.1-.24-.41-1.18.09-2.44 0 0 .78-.25 2.54.94A8.8 8.8 0 0 1 12 7.43c.79 0 1.57.1 2.31.31 1.76-1.19 2.54-.94 2.54-.94.5 1.26.19 2.2.09 2.44.59.64.95 1.47.95 2.47 0 3.54-2.15 4.31-4.2 4.54.33.29.63.85.63 1.72v2.36c0 .24.16.52.64.43A9.25 9.25 0 0 0 12 2.75z" fill="currentColor"/>
+      </svg>
+      <span class="sr-only">GitHub</span>
+    </a>
+    <a class="icon-button" href="https://scholar.google.com/scholar?q=Jiaxing+Yu+3D+Gaussian+Splatting" title="Google Scholar" aria-label="Google Scholar search">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 3.2 3.6 8l8.4 4.8L20.4 8 12 3.2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+        <path d="M7.2 10.4v4.2c0 1.6 2.1 3 4.8 3s4.8-1.4 4.8-3v-4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        <path d="M20.4 8v6.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      </svg>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+    <a class="icon-button model-hub" href="https://huggingface.co/" title="Model Hub" aria-label="Model hub">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="9" fill="#ffd65a" stroke="currentColor" stroke-width="1.3"/>
+        <path d="M7.6 9.4c.55-.7 1.55-.7 2.1 0M14.3 9.4c.55-.7 1.55-.7 2.1 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M8.2 14.2c1.55 1.45 6.05 1.45 7.6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M6.8 12.2c-1.7.4-2.6 1.25-2.3 2.18.28.86 1.38.96 2.48.16M17.2 12.2c1.7.4 2.6 1.25 2.3 2.18-.28.86-1.38.96-2.48.16" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/>
+      </svg>
+      <span class="sr-only">Model Hub</span>
+    </a>
+  </div>
   <header class="topbar">
     <nav class="container nav" aria-label="Primary navigation">
       <a class="brand" href="#top">Jiaxing Yu</a>
@@ -342,10 +437,10 @@
     <section class="profile" aria-label="Profile">
       <div>
         <h1>Jiaxing Yu</h1>
-        <p class="role">Ph.D. Student at Nanjing University</p>
+        <p class="role">Ph.D. Student(2024 - Now) at Nanjing University</p>
         <p>
-          I am currently a Ph.D. student in Computer Science and Technology at Nanjing University, advised by
-          Prof. Yanwen Guo, Prof. Hao Guo, and Prof. Yuanqi Li.
+          I am currently a Ph.D. student at School of Computer Science, Nanjing University, supervised by
+          Prof. Yanwen Guo<a href="https://scholar.google.com/citations?user=hVlfEkwAAAAJ&hl=zh-CN">(Homepage)</a>, Prof. Jie Guo<a href="https://www.njumeta.com/">(Homepage)</a>, and assistant researcher Yuanqi Li<a href="https://yuanqili.github.io/">(Homepage)</a>.
         </p>
         <p>
           My research interests include computer graphics, 3D vision, 3D Gaussian Splatting, structured reconstruction,
@@ -425,7 +520,7 @@
         <div class="entry-time">2020.09 - 2024.06</div>
         <div>
           <p class="entry-title">Xiamen University</p>
-          <p class="entry-meta">B.Eng., Computer Science and Technology, GPA 3.7/4, Top 10%</p>
+          <p class="entry-meta">B.Eng., Computer Science and Technology</p>
           <p>Selected coursework: Data Structures 93, Computer Networks 87, Pattern Recognition 90, Algorithm Design and Analysis 91, Digital Signal Processing 92.</p>
         </div>
       </article>
