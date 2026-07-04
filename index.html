@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>余佳兴 | 个人主页</title>
-  <meta name="description" content="余佳兴的个人主页，研究方向包括 3D Gaussian Splatting、结构化重建、CAD 建模与三维重建。">
+  <title>Jiaxing Yu | Personal Homepage</title>
+  <meta name="description" content="Personal homepage of Jiaxing Yu, a Ph.D. student working on 3D Gaussian Splatting, structured reconstruction, CAD modeling, and 3D vision.">
   <style>
     :root {
       color-scheme: light;
@@ -22,7 +22,7 @@
       margin: 0;
       color: var(--ink);
       background: linear-gradient(180deg, #eef4f8 0%, #ffffff 42%);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       line-height: 1.65;
     }
 
@@ -99,9 +99,14 @@
       place-items: center;
       aspect-ratio: 1 / 1;
       background: radial-gradient(circle at 32% 24%, rgba(15, 118, 110, 0.18), transparent 36%), linear-gradient(135deg, #dce9f1, #f8fafc 55%, #e9eef4);
-      color: var(--accent-strong);
-      font-size: 84px;
-      font-weight: 800;
+      overflow: hidden;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .profile-panel dl {
@@ -217,53 +222,53 @@
 </head>
 <body>
   <main class="page">
-    <section class="hero" aria-label="个人简介">
+    <section class="hero" aria-label="Profile">
       <div>
-        <p class="eyebrow">Computer Vision · 3D Reconstruction · AIGC</p>
-        <h1>余佳兴</h1>
-        <p class="subtitle">南京大学计算机科学与技术博士研究生，关注 3D Gaussian Splatting、结构化重建、CAD 建模、多模态大模型与三维视觉生成。</p>
-        <ul class="contact" aria-label="联系方式">
+        <p class="eyebrow">Computer Vision - 3D Reconstruction - AIGC</p>
+        <h1>Jiaxing Yu</h1>
+        <p class="subtitle">I am a Ph.D. student in Computer Science and Technology at Nanjing University, working on 3D Gaussian Splatting, structured reconstruction, CAD modeling, multimodal foundation models, and 3D vision generation.</p>
+        <ul class="contact" aria-label="Contact information">
           <li><a href="mailto:yjx2851@gmail.com">yjx2851@gmail.com</a></li>
-          <li><span>微信：yjx2851</span></li>
-          <li><span>电话：13813082851</span></li>
+          <li><span>WeChat: yjx2851</span></li>
+          <li><span>Phone: 13813082851</span></li>
         </ul>
       </div>
 
-      <aside class="profile-panel" aria-label="基本信息">
-        <div class="portrait" aria-hidden="true">YX</div>
+      <aside class="profile-panel" aria-label="Basic information">
+        <div class="portrait"><img src="personal.jpg" alt="Portrait of Jiaxing Yu"></div>
         <dl>
-          <dt>当前</dt><dd>博士研究生</dd>
-          <dt>学校</dt><dd>南京大学</dd>
-          <dt>方向</dt><dd>三维重建与 AIGC</dd>
-          <dt>主页</dt><dd>yjx2851.github.io</dd>
+          <dt>Current</dt><dd>Ph.D. Student</dd>
+          <dt>School</dt><dd>Nanjing University</dd>
+          <dt>Focus</dt><dd>3D Reconstruction & AIGC</dd>
+          <dt>Website</dt><dd>yjx2851.github.io</dd>
         </dl>
       </aside>
     </section>
 
     <section class="section" aria-labelledby="research-title">
       <div class="section-title">
-        <h2 id="research-title">科研方向</h2>
-        <p>围绕可编辑、可结构化的三维场景理解与生成，结合渲染、几何建模和学习式优化方法。</p>
+        <h2 id="research-title">Research</h2>
+        <p>My research focuses on editable and structured 3D scene understanding and generation, combining differentiable rendering, geometric modeling, and learning-based optimization.</p>
       </div>
       <div class="grid">
         <article class="card highlight">
-          <h3>BrepGaussian：基于 3DGS 的结构化重建</h3>
-          <p class="meta">CVPR 2026 Accept · 独立一作</p>
+          <h3>BrepGaussian: Structured Reconstruction Based on 3DGS</h3>
+          <p class="meta">CVPR 2026 Accept - First Author</p>
           <ul class="clean">
-            <li>研究多视角重建理论与 3D Gaussian Splatting 技术，理解渲染器 CUDA 源码并进行修改。</li>
-            <li>探索结构化重建、CAD 重建与线框重建，阅读并复现实验相关工作。</li>
-            <li>搭建完整 pipeline，从多视角图像中重建 CAD 部件，实验达到 SOTA。</li>
+            <li>Studied multi-view reconstruction and 3D Gaussian Splatting, including the CUDA source code of the renderer and its modification.</li>
+            <li>Explored structured reconstruction, CAD reconstruction, and wireframe reconstruction through literature review and experimental reproduction.</li>
+            <li>Built a complete pipeline for reconstructing CAD components from multi-view images, achieving SOTA experimental performance.</li>
           </ul>
           <div class="tags"><span class="tag">3DGS</span><span class="tag">CAD Reconstruction</span><span class="tag">CUDA</span><span class="tag">CVPR</span></div>
         </article>
 
         <article class="card">
-          <h3>研究兴趣</h3>
-          <p class="meta">深度学习 · 计算机图形学 · 三维视觉</p>
+          <h3>Research Interests</h3>
+          <p class="meta">Deep Learning - Computer Graphics - 3D Vision</p>
           <ul class="clean">
-            <li>深度学习、计算机图形学、机器学习与三维视觉。</li>
-            <li>三维重建与生成、CAD 建模、多模态大模型。</li>
-            <li>3D Gaussian Splatting、mesh 可微渲染与 transformer。</li>
+            <li>Deep learning, computer graphics, machine learning, and 3D vision.</li>
+            <li>3D reconstruction and generation, CAD modeling, and multimodal large models.</li>
+            <li>3D Gaussian Splatting, mesh differentiable rendering, transformers, and VAEs.</li>
           </ul>
           <div class="tags"><span class="tag">Gaussian Splatting</span><span class="tag">Mesh</span><span class="tag">Transformer</span></div>
         </article>
@@ -271,38 +276,38 @@
     </section>
 
     <section class="section" aria-labelledby="education-title">
-      <div class="section-title"><h2 id="education-title">教育背景</h2></div>
+      <div class="section-title"><h2 id="education-title">Education</h2></div>
       <div class="timeline">
         <article class="card">
-          <div class="item-head"><h3>南京大学 · 计算机科学与技术</h3><span class="time">2024.09 - 2029.06</span></div>
-          <p class="meta">博士研究生 · 导师：郭延文、过浩、李元琪</p>
+          <div class="item-head"><h3>Nanjing University - Computer Science and Technology</h3><span class="time">2024.09 - 2029.06</span></div>
+          <p class="meta">Ph.D. Student - Advisors: Yanwen Guo, Hao Guo, Yuanqi Li</p>
           <ul class="clean">
-            <li>研究领域包括深度学习、计算机图形学、机器学习、三维视觉、三维重建与生成、CAD 建模、多模态大模型等。</li>
-            <li>掌握 3D Gaussian Splatting、mesh 可微渲染器、transformer、VAE 等技术。</li>
+            <li>Research areas include deep learning, computer graphics, machine learning, 3D vision, 3D reconstruction and generation, CAD modeling, and multimodal foundation models.</li>
+            <li>Experienced with 3D Gaussian Splatting, mesh differentiable renderers, transformers, and VAEs.</li>
           </ul>
         </article>
 
         <article class="card">
-          <div class="item-head"><h3>厦门大学 · 计算机科学与技术</h3><span class="time">2020.09 - 2024.06</span></div>
-          <p class="meta">本科 · GPA 3.7/4 · top 10%</p>
-          <ul class="clean"><li>主修课程：数据结构 93、计算机网络 87、模式识别 90、算法设计与分析 91、数字信号处理 92 等。</li></ul>
+          <div class="item-head"><h3>Xiamen University - Computer Science and Technology</h3><span class="time">2020.09 - 2024.06</span></div>
+          <p class="meta">B.Eng. - GPA 3.7/4 - Top 10%</p>
+          <ul class="clean"><li>Selected coursework: Data Structures 93, Computer Networks 87, Pattern Recognition 90, Algorithm Design and Analysis 91, Digital Signal Processing 92.</li></ul>
         </article>
       </div>
     </section>
 
     <section class="section" aria-labelledby="experience-title">
-      <div class="section-title"><h2 id="experience-title">实习经历</h2></div>
+      <div class="section-title"><h2 id="experience-title">Experience</h2></div>
       <article class="card">
-        <div class="item-head"><h3>字节跳动 GAME 3D AIGC</h3><span class="time">2026.02 - 2026.05</span></div>
-        <p class="meta">AI 算法实习生</p>
+        <div class="item-head"><h3>ByteDance GAME 3D AIGC</h3><span class="time">2026.02 - 2026.05</span></div>
+        <p class="meta">AI Algorithm Intern</p>
         <ul class="clean">
-          <li>制定 Mesh 拓扑质量标准，使用 Qwen-3.5 进行自动化数据清洗，处理百万级数据集，实现约 95% 的高质量数据召回率。</li>
-          <li>参与 Remesh 生成模块开发，结合自回归模型与强化学习策略，优化生成模型在非规则几何体上的拓扑连通性。</li>
+          <li>Defined mesh topology quality standards and used Qwen-3.5 for automated data cleaning on million-scale datasets, achieving about 95% high-quality data recall.</li>
+          <li>Contributed to a remesh generation module by combining autoregressive modeling and reinforcement learning strategies, improving topological connectivity for irregular geometries.</li>
         </ul>
       </article>
     </section>
   </main>
 
-  <footer class="footer"><p>© 2026 余佳兴 · Built for GitHub Pages</p></footer>
+  <footer class="footer"><p>(c) 2026 Jiaxing Yu - Built for GitHub Pages</p></footer>
 </body>
 </html>
